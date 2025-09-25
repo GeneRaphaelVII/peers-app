@@ -21,12 +21,14 @@ A web app built with **Astro** and **Vue** to display peer profiles with availab
 ```bash
 git clone <repository-url>
 cd peers-app
+cd nebulous-neptune
 ```
 
 2. Install dependencies and run the development server:
 ```bash
 npm install
+npm install @astrojs/vue vue@3
 npm run dev
 ```
 
-3. Open your browser and visit http://localhost:3000 to see the app.
+3. Open your browser and visit http://localhost:4321/ to see the app.
