@@ -1,16 +1,17 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PeersList from '../components/PeersList.vue';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Peers App">
+  <!-- left header content -->
+  <div slot="header-left">
+    <div class="blue-section"></div>
+  </div>
+
+  <div class="page-body" style="padding: 2rem;">
+    <div class="peers-grid">
+      <PeersList client:load /> <!-- ensures the component is interactive -->
+    </div>
+  </div>
+</BaseLayout>

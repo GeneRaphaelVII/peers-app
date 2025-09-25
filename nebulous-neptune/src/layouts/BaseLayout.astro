@@ -1,0 +1,27 @@
+---
+import "../styles/global.css";
+const { title = "Peers App" } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="header-bar">
+      <div class="header-left">
+        <slot name="header-left" />
+      </div>
+      <div class="header-right">
+        <slot name="header-right" />
+      </div>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
